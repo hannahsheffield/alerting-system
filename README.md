@@ -1,4 +1,4 @@
- 🔔 Looker Alerting Extension
+ **🔔 Looker Alerting Extension
 
 **Looker Alerting Extension** is a lightweight system that enables non-technical users to set up data quality checks and alerts in **Looker**, using only **SQL**—no LookML modeling required.
 
