@@ -1,0 +1,4 @@
+- The Google Sheet needs at least the following columns:
+    - `implementation_status`: code that signal if a query is ready to be parsed.
+    - `implementation_query`: query that defines the data check.
+    - `looker_support`: link to supporting resources.
