@@ -1,0 +1,42 @@
+# In a view file
+view: checks {
+
+  sql_table_name: `[BIGQUERY-PROJECT].[BIGQUERY-DATASET].checks` ;;
+
+  dimension: check_name {
+    label: "Check Name"
+    type: string
+    sql: ${TABLE}.check_name ;;
+  }
+
+  dimension: check_source {
+    label: "Check Source"
+    type: string
+    sql: ${TABLE}.check_source ;;
+  }
+
+  dimension: check_looker_support {
+    label: "Check Looker Support"
+    type: string
+    sql: ${TABLE}.check_looker_support ;;
+
+    link: {
+      label: "Link"
+      url: "{{ value }}"
+    }
+  }
+
+  dimension_group: check_run_timestamp {
+    label: "Check Run Timestamp"
+    type: time
+    timeframes: [raw, time, date, week, month, quarter, year]
+    sql: ${TABLE}.check_run_timestamp ;;
+  }
+
+  measure: check_result {
+    label: "Check Run Result"
+    description: "Result of the check that has run."
+    type: max
+    sql: ${TABLE}.check_result;;
+  }
+}
