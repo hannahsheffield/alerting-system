@@ -1,0 +1,6 @@
+# In the model file
+explore: [EXPLORE NAME] {
+  view_name: checks
+  label: [EXPLORE LABEL]
+  hidden: no
+}
